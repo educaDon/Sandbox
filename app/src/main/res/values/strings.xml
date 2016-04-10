@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Sandbox</string>
+    <string name="tempconv_c2f_button">C->F</string>
+    <string name="tempconv_f2c_button">F->C</string>
+    <string name="tempconv_header">Convert Temperature</string>
+    <string name="tempconv_hint">Enter temperature to convert</string>
+
 </resources>

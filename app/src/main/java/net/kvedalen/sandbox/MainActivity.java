@@ -1,5 +1,6 @@
 package net.kvedalen.sandbox;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -56,7 +57,12 @@ public class MainActivity extends AppCompatActivity {
                 int myPos = position;
                 String itemClicked = listview.getItemAtPosition(myPos).toString();
 
-                Toast.makeText(getApplicationContext(),"Item clicked: " + itemClicked, Toast.LENGTH_LONG).show();
+                if (myPos == 0) {
+                    Intent intent = new Intent(MainActivity.this, TempConvActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Item clicked: " + itemClicked, Toast.LENGTH_LONG).show();
+                }
             }
         });
 
