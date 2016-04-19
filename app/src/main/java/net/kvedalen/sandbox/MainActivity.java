@@ -1,5 +1,6 @@
 package net.kvedalen.sandbox;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private ListView listview;
     private CustomListViewAdapter customListViewAdapter;
@@ -25,14 +26,18 @@ public class MainActivity extends AppCompatActivity {
                 "Temperature Converter",
                 "RadioButtons",
                 "Checkboxes",
-                "Switches"
+                "Switches",
+                "Login Screen",
+                "Grid layout",
         };
 
         final String[] descriptions = new String[]{
                 "Convert between Celcius and Fahrenheit",
                 "... for one option only",
                 "... for multiple options",
-                "... for turning things on/off"
+                "... for turning things on/off",
+                "... testing Textfields",
+                "... with animations!!"
         };
 
         ArrayList<HashMap<String, String>> datalist = new ArrayList<>();
@@ -57,11 +62,25 @@ public class MainActivity extends AppCompatActivity {
                 int myPos = position;
                 String itemClicked = listview.getItemAtPosition(myPos).toString();
 
-                if (myPos == 0) {
-                    Intent intent = new Intent(MainActivity.this, TempConvActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(getApplicationContext(), "Item clicked: " + itemClicked, Toast.LENGTH_LONG).show();
+                Intent intent;
+
+                switch (myPos) {
+                    case 0:
+                        intent = new Intent(MainActivity.this, TempConvActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent = new Intent(MainActivity.this, LoginScreenActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent = new Intent(MainActivity.this, GridAnimationActivity.class);
+                        startActivity(intent);
+                        break;
+                    default:
+                        Toast.makeText(getApplicationContext(), "Item clicked: " + itemClicked, Toast.LENGTH_LONG).show();
+                        break;
+
                 }
             }
         });

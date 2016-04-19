@@ -4,5 +4,7 @@
     <string name="tempconv_f2c_button">F->C</string>
     <string name="tempconv_header">Convert Temperature</string>
     <string name="tempconv_hint">Enter temperature to convert</string>
+    <string name="title_activity_login_screen">loginScreenActivity</string>
+    <string name="title_activity_grid_animation">GridAnimationActivity</string>
 
 </resources>
