@@ -6,5 +6,6 @@
     <string name="tempconv_hint">Enter temperature to convert</string>
     <string name="title_activity_login_screen">loginScreenActivity</string>
     <string name="title_activity_grid_animation">GridAnimationActivity</string>
-
+    <string name="perfect">Perfekt!!!!</string>
+    <string name="playAgain">En gang til!</string>
 </resources>

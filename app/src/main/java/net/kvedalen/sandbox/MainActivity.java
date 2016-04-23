@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
                 "Switches",
                 "Login Screen",
                 "Grid layout",
+                "Guess the number"
         };
 
         final String[] descriptions = new String[]{
@@ -37,7 +38,8 @@ public class MainActivity extends Activity {
                 "... for multiple options",
                 "... for turning things on/off",
                 "... testing Textfields",
-                "... with animations!!"
+                "... with animations!!",
+                "... between 1 and 20"
         };
 
         ArrayList<HashMap<String, String>> datalist = new ArrayList<>();
@@ -75,6 +77,10 @@ public class MainActivity extends Activity {
                         break;
                     case 5:
                         intent = new Intent(MainActivity.this, GridAnimationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent = new Intent(MainActivity.this, GuessTheNumberActivity.class);
                         startActivity(intent);
                         break;
                     default:

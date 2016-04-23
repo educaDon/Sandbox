@@ -17,5 +17,6 @@
     <color name="greyLight">#888888</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="menuBg">#d7c299</color>
 
 </resources>
